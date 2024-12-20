@@ -1,0 +1,147 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9; /* Light gray background */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Arrange header, main, and footer vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Subtle outline for readability */
+    margin: 0;
+}
+
+/* Main Container */
+main {
+    width: 90%;
+    max-width: 600px;
+    background: #b1afaf; /* Light gray container */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+/* Progress Bar */
+#progress-bar-container {
+    width: 100%;
+    background: #e0e0e0; /* Light gray for progress bar container */
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    width: 0;
+    height: 100%;
+    background: #4caf50;
+    transition: width 0.5s ease;
+}
+
+/* Section Styling */
+section {
+    width: 100%;
+    text-align: center;
+}
+
+/* Question Styling */
+#question {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); /* Subtle shadow for readability */
+}
+
+/* Options Container */
+
+#options {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    width: 100%;
+    list-style: none; /* Removes the default bullet points */
+    padding: 0; /* Removes default padding for lists */
+    margin: 0; /* Removes default margin for lists */
+}
+
+#options li {
+    list-style: none; /* Ensures no bullets for list items */
+    margin: 10px 0;
+}
+
+
+/* Buttons */
+#options button {
+    width: 100%;
+    max-width: 400px; /* Ensure buttons are aligned and centered */
+    padding: 10px;
+    font-size: 1rem;
+    background: #f9f9f9; /* Light button background */
+    color: #333;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0; /* Add spacing between buttons */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Subtle text shadow */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#options button:hover {
+    background: #e0e0e0; /* Slight hover effect */
+    transform: scale(1.05); /* Slight scaling on hover */
+}
+
+#options button:disabled.correct {
+    background-color: #4caf50; /* Green for correct */
+    color: white;
+}
+
+#options button:disabled.incorrect {
+    background-color: #f44336; /* Red for incorrect */
+    color: white;
+}
+
+/* Score Display */
+#score-display {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Subtle shadow for readability */
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #666; /* Subtle contrast */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
