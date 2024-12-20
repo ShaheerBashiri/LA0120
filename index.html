@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Allgemeinwissen Quiz</h1>
+    </header>
+    <main>
+        <section id="menu">
+            <h2>Wähle eine Kategorie:</h2>
+            <button onclick="startQuiz('Geschichte')">Geschichte</button>
+            <button onclick="startQuiz('Geografie')">Geografie</button>
+            <button onclick="startQuiz('Wissenschaft')">Wissenschaft</button>
+            <button onclick="startQuiz('Kultur')">Kultur</button>
+        </section>
+        <section id="quiz" style="display: none;">
+            <h2 id="category"></h2>
+            <div id="question-container">
+                <h3 id="question"></h3>
+                <ul id="options"></ul>
+            </div>
+            <!-- Important: Ensure the button ID matches the JavaScript -->
+            <button id="next-btn" disabled>Weiter</button>
+            <p id="score-display"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mohammad Shahir Bashiri LA0120</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
